@@ -5,181 +5,198 @@ TODO add answer order shuffling
 TODO add scoring system
  -->
 <html>
-    <head>
-        <title>Quiz Engine</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-			* { padding: 0; margin: 0; }
 
-			html, body {
-			  height: 100%;
-			  font-size: 24px;
-			  display: flex;
-			  flex-direction: column;
-			}
+<head>
+    <title>Quiz Engine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,
+        body {
+            height: 100%;
+            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        body > * {
+            flex-shrink: 0;
+        }
+        header {
+            margin: 0 auto;
+            background-color: lightblue;
+            width: 600px;
+            text-align: center;
+            border: 1px solid blue;
+        }
+        #settings {
+            margin: 0 auto;
+            background-color: lightblue;
+            width: 600px;
+            text-align: center;
+            border: 1px solid blue;
+        }
+        #controls {
+            margin: 0 auto;
+            background-color: lightblue;
+            width: 600px;
+            text-align: center;
+            border: 1px solid blue;
+        }
+        #status {
+            margin: 0 auto;
+            background-color: lightblue;
+            width: 600px;
+            text-align: center;
+            border: 1px solid blue;
+            display: none;
+        }
+        #content {
+            margin: 0 auto;
+            padding: 5px;
+            width: 590px;
+            height: 380px;
+            border: 1px solid blue;
+        }
+        .correctAnswer {
+            color: green;
+        }
+        .incorrectAnswer {
+            color: red;
+        }
+        #nextButton {
+            width: 300px;
+            height: 100px;
+            font-size: 26px;
+        }
+    </style>
+</head>
 
-			body > * {
-			  flex-shrink: 0;
-			}
-			header {
-				margin: 0 auto;
-				background-color: lightblue;
-				width: 600px;
-				text-align: center;
-				border: 1px solid blue;
-			}
-			#settings {
-				margin: 0 auto;
-				background-color: lightblue;
-				width: 600px;
-				text-align: center;
-				border: 1px solid blue;
-			}
-			#controls {
-				margin: 0 auto;
-				background-color: lightblue;
-				width: 600px;
-				text-align: center;
-				border: 1px solid blue;
-			}
-			#status {
-				margin: 0 auto;
-				background-color: lightblue;
-				width: 600px;
-				text-align: center;
-				border: 1px solid blue;
-				display: none;
-			}
-			#content {
-				margin: 0 auto;
-				padding: 5px;
-				width: 590px;
-				height: 380px;
-				border: 1px solid blue;
-			}
-			.correctAnswer {
-				color: green;
-			}
-			
-			.incorrectAnswer {
-				color: red;
-			}
-			#nextButton {
-				width: 300px;
-				height: 100px;
-				font-size: 26px;
-			}
-			
-		</style>
-    </head>
-    <body>
-		<header>Quiz Engine</header>
-		<div id="settings"></div>
-        <div id="content"></div>
-		<div id="status">&nbsp;</div>
-		<div id="controls"><button id="nextButton"onclick="nextQuestion()">Next</button>
-		<script src="pcmquiz.js"></script>
-		<script>
-			var globalScore = 0;
-			var globalProgress = 0;
-			var currentAnswer = 0;
-			
-			function createQuestionBlock(i){
-				var questionNumber = i + 1;
-				var qString = "<p>Question number: " + questionNumber + "<br><b>" + getQuestion(i) + "</b></p>" + br() + "<form>" +
-					"<label for=\"answer1\"><input type=\"radio\" id=\"answer1\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=1> " + 
-					getAnswer1(i) + "<\label>" + br() +
-					"<label for=\"answer2\"><input type=\"radio\" id=\"answer2\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=2> " + 
-					getAnswer2(i) + "<\label>" + br() +
-					"<label for=\"answer3\"><input type=\"radio\" id=\"answer3\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=3> " + 
-					getAnswer3(i) + "<\label>" + br() +
-					"<label for=\"answer4\"><input type=\"radio\" id=\"answer4\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=4> " + 
-					getAnswer4(i) + "<\label>" + br() + br();
-				return qString;
-				
-			}
-			function radioOnChange(answers, i){
-				if(answers.value == questions[i].aCorrect) {
-					currentAnswer = answers.value;
-					document.getElementById("status").innerHTML = "Current Answer: " + answers.value + "<span class=\"correctAnswer\"> Correct! </span>";
-				} else {
-					currentAnswer = answers.value;
-					document.getElementById("status").innerHTML = "Current Answer: " + answers.value + "<span class=\"incorrectAnswer\"> Incorrect! </span>";
-				}
-			}
-			function nextQuestion(){
-				if(currentAnswer == questions[globalProgress].aCorrect) {
-					globalProgress++;
-					globalScore++;
-				} else {
-					globalProgress++;
-				}
-				if(globalProgress>=questions.length) {
-					dprintScore();
-				}else{
-					dprint();
-				}
-			}
-			function dprintScore(){
-				var passString = "";
-				if(globalScore>35){
-					passString = "You <b>Passed!!!</b>";
-				} else {
-					passString = "You <b>Failed!!!</b>";
-				}
-				document.getElementById("content").innerHTML = "<center><p>Your score is:<br><b>" + globalScore + "/50</b><br><br>" + passString;
-			}
-			function getRandomQuestion(){
-				return Math.floor((Math.random() * questions.length));
-			}
-			
-			function getQuestion(i){
-				return questions[i].question;
-			}
-			function getAnswer1(i){
-				return questions[i].a1;
-			}
-			function getAnswer2(i){
-				return questions[i].a2;
-			}
-			function getAnswer3(i){
-				return questions[i].a3;
-			}
-			function getAnswer4(i){
-				return questions[i].a4;
-			}
-			function getCorrectAnswer(i){
-				return questions[i].aCorrect;
-			}
-			function br() {
-				return "<br>";
-			}
-			function getQuestionBlock(i){
-				return br() + getQuestion(i) + br() + 
-								getAnswer1(i) + br() +
-								getAnswer2(i) + br() +
-								getAnswer3(i) + br() +
-								getAnswer4(i) + br() +
-								getCorrectAnswer(i) + br() + br() +
-								"Example question finish";
-			}
-			function testQuestionBlock() {
-				var qString = br() + getQuestion(1) + br() + 
-								getAnswer1(1) + br() +
-								getAnswer2(1) + br() +
-								getAnswer3(1) + br() +
-								getAnswer4(1) + br() +
-								getCorrectAnswer(1) + br() + br() +
-								"Example question finish" + br();
-								
-					document.getElementById("content").innerHTML = "<br>" + qString+ "<br><br>Length of Question Array: " + questions.length + 1;
-			}
-			function dprint(s){
-				document.getElementById("content").innerHTML = createQuestionBlock(globalProgress);
-			}
-			document.getElementById("settings").innerHTML = "Number of Questions: " + questions.length;
-			dprint();
-		</script>
-    </body>
+<body>
+    <header>Quiz Engine</header>
+    <div id="settings"></div>
+    <div id="content"></div>
+    <div id="status">&nbsp;</div>
+    <div id="controls">
+        <button id="nextButton" onclick="nextQuestion()">Next</button>
+        <script src="pcmquiz.js"></script>
+        <script>
+            var globalScore = 0;
+            var globalProgress = 0;
+            var currentAnswer = 0;
+
+            function createQuestionBlock(i) {
+                var questionNumber = i + 1;
+                var qString = "<p>Question number: " + questionNumber + "<br><b>" + getQuestion(i) + "</b></p>" + br() + "<form>" +
+                    "<label for=\"answer1\"><input type=\"radio\" id=\"answer1\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=1> " +
+                    getAnswer1(i) + "<\label>" + br() +
+                    "<label for=\"answer2\"><input type=\"radio\" id=\"answer2\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=2> " +
+                    getAnswer2(i) + "<\label>" + br() +
+                    "<label for=\"answer3\"><input type=\"radio\" id=\"answer3\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=3> " +
+                    getAnswer3(i) + "<\label>" + br() +
+                    "<label for=\"answer4\"><input type=\"radio\" id=\"answer4\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=4> " +
+                    getAnswer4(i) + "<\label>" + br() + br();
+                return qString;
+
+            }
+
+            function radioOnChange(answers, i) {
+                if (answers.value == questions[i].aCorrect) {
+                    currentAnswer = answers.value;
+                    document.getElementById("status").innerHTML = "Current Answer: " + answers.value + "<span class=\"correctAnswer\"> Correct! </span>";
+                } else {
+                    currentAnswer = answers.value;
+                    document.getElementById("status").innerHTML = "Current Answer: " + answers.value + "<span class=\"incorrectAnswer\"> Incorrect! </span>";
+                }
+            }
+
+            function nextQuestion() {
+                if (currentAnswer == questions[globalProgress].aCorrect) {
+                    globalProgress++;
+                    globalScore++;
+                } else {
+                    globalProgress++;
+                }
+                if (globalProgress >= questions.length) {
+                    dprintScore();
+                } else {
+                    dprint();
+                }
+            }
+
+            function dprintScore() {
+                var passString = "";
+                if (globalScore > 35) {
+                    passString = "You <b>Passed!!!</b>";
+                } else {
+                    passString = "You <b>Failed!!!</b>";
+                }
+                document.getElementById("content").innerHTML = "<center><p>Your score is:<br><b>" + globalScore + "/50</b><br><br>" + passString;
+            }
+
+            function getRandomQuestion() {
+                return Math.floor((Math.random() * questions.length));
+            }
+
+            function getQuestion(i) {
+                return questions[i].question;
+            }
+
+            function getAnswer1(i) {
+                return questions[i].a1;
+            }
+
+            function getAnswer2(i) {
+                return questions[i].a2;
+            }
+
+            function getAnswer3(i) {
+                return questions[i].a3;
+            }
+
+            function getAnswer4(i) {
+                return questions[i].a4;
+            }
+
+            function getCorrectAnswer(i) {
+                return questions[i].aCorrect;
+            }
+
+            function br() {
+                return "<br>";
+            }
+
+            function getQuestionBlock(i) {
+                return br() + getQuestion(i) + br() +
+                    getAnswer1(i) + br() +
+                    getAnswer2(i) + br() +
+                    getAnswer3(i) + br() +
+                    getAnswer4(i) + br() +
+                    getCorrectAnswer(i) + br() + br() +
+                    "Example question finish";
+            }
+
+            function testQuestionBlock() {
+                var qString = br() + getQuestion(1) + br() +
+                    getAnswer1(1) + br() +
+                    getAnswer2(1) + br() +
+                    getAnswer3(1) + br() +
+                    getAnswer4(1) + br() +
+                    getCorrectAnswer(1) + br() + br() +
+                    "Example question finish" + br();
+
+                document.getElementById("content").innerHTML = "<br>" + qString + "<br><br>Length of Question Array: " + questions.length + 1;
+            }
+
+            function dprint(s) {
+                document.getElementById("content").innerHTML = createQuestionBlock(globalProgress);
+            }
+            document.getElementById("settings").innerHTML = "Number of Questions: " + questions.length;
+            dprint();
+        </script>
+</body>
+
 </html>
