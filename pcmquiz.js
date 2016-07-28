@@ -448,7 +448,7 @@ var questions = [
         a3: "Use evidence obtained from users, systems tests and the error log",
         a4: "Use evidence obtained from the system memory and the error log",
         aCorrect: 3
-    }
+    },
 	// 51
 	{
         question: "What feature is characteristic of adware ?",
