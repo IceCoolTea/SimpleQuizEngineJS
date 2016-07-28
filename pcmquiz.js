@@ -449,4 +449,67 @@ var questions = [
         a4: "Use evidence obtained from the system memory and the error log",
         aCorrect: 3
     }
+	// 51
+	{
+        question: "What feature is characteristic of adware ?",
+        a1: "Harmful virus that corrupts data",
+        a2: "It is displayed in popup windows,which open faster than the user can close them",
+        a3: "Sends out sensitive information",
+        a4: "Its a malicious virus which gets into the computer by human error",
+        aCorrect: 4
+    },
+	// 52
+	{
+        question: "A Berg connector is what connects a.. ?",
+        a1: "Optical drive",
+        a2: "Floppy drive",
+        a3: "Harddrive",
+        a4: "PSU",
+        aCorrect: 2
+    },
+	// 53
+	{
+        question: "What does POST stand for ?",
+        a1: "Peter On Sea Trip",
+        a2: "Power On Self Test",
+        a3: "Power On System Test",
+        a4: "Power On System Trust",
+        aCorrect: 2
+    },
+	// 54
+	{
+        question: "When it comes to security which file system is more secure ?",
+        a1: "FAT",
+        a2: "FAT32",
+        a3: "NTFS",
+        a4: "UDF",
+        aCorrect: 3
+    },	
+	// 55
+	{
+        question: "What is typically included in a service pack ?",
+        a1: "Device drivers for non-standard devices",
+        a2: "Virus definitions",
+        a3: "Operating system upgrades and patches",
+        a4: "Hardware compatibility list",
+        aCorrect: 3
+    },	
+	// 56
+		{
+        question: "What does ICMP stand for ?",
+        a1: "Internet control message protocol",
+        a2: "Ice cold master ponies",
+        a3: "Internet cache master protocol",
+        a4: "Information control message protocol",
+        aCorrect: 1
+    },
+	// 57
+		{
+        question: "Which of the following is a software program that displays advertising on your computer ?",
+        a1: "Spyware",
+        a2: "Adware",
+        a3: "Grayware",
+        a4: "Virus",
+        aCorrect: 2
+    }
 ]

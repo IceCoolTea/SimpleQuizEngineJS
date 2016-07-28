@@ -1,5 +1,7 @@
 # SimpleQuizEngineJS
-A simple quiz engine to take quiz questions either as a java-array/object or as JSON. Gives simple scoring. BETA
+A simple multiple choice quiz engine to take quiz questions either as a java-array/object or as JSON. Gives simple scoring. BETA
+
+Comes with PC Support/Maintenance questions
 
 TODO:
 * Add more questions
