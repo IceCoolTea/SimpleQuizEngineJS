@@ -1,3 +1,5 @@
+var quizTitle = "ICT System Support and Maintenance";
+var passingPercent = 70;
 var questions = [
     // 1
     {

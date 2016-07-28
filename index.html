@@ -97,7 +97,7 @@ TODO add scoring system
             var globalScore = 0;
             var globalProgress = 0;
             var currentAnswer = 0;
-
+			
             function createQuestionBlock(i) {
                 var questionNumber = i + 1;
                 var qString = "<p>Question number: " + questionNumber + "<br><b>" + getQuestion(i) + "</b></p>" + br() + "<form>" +
@@ -112,14 +112,17 @@ TODO add scoring system
                 return qString;
 
             }
+			
+			function requiredScore(){
+				
+				return Math.floor(questions.length*(passingPercent/100));
+			}
 
             function radioOnChange(answers, i) {
                 if (answers.value == questions[i].aCorrect) {
                     currentAnswer = answers.value;
-                    document.getElementById("status").innerHTML = "Current Answer: " + answers.value + "<span class=\"correctAnswer\"> Correct! </span>";
                 } else {
                     currentAnswer = answers.value;
-                    document.getElementById("status").innerHTML = "Current Answer: " + answers.value + "<span class=\"incorrectAnswer\"> Incorrect! </span>";
                 }
             }
 
@@ -139,12 +142,12 @@ TODO add scoring system
 
             function dprintScore() {
                 var passString = "";
-                if (globalScore > 35) {
+                if (globalScore > requiredScore()) {
                     passString = "You <b>Passed!!!</b>";
                 } else {
                     passString = "You <b>Failed!!!</b>";
                 }
-                document.getElementById("content").innerHTML = "<center><p>Your score is:<br><b>" + globalScore + "/50</b><br><br>" + passString;
+                document.getElementById("content").innerHTML = "<center><p>Your score is:<br><b>" + globalScore + "/"+questions.length +"</b><br><br>" + passString;
             }
 
             function getRandomQuestion() {
