@@ -86,7 +86,8 @@ TODO add scoring system
 			var currentAnswer = 0;
 			
 			function createQuestionBlock(i){
-				var qString = "<p>Question number: " + i + "<br><b>" + getQuestion(i) + "</b></p>" + br() + "<form>" +
+				var questionNumber = i + 1;
+				var qString = "<p>Question number: " + questionNumber + "<br><b>" + getQuestion(i) + "</b></p>" + br() + "<form>" +
 					"<label for=\"answer1\"><input type=\"radio\" id=\"answer1\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=1> " + 
 					getAnswer1(i) + "<\label>" + br() +
 					"<label for=\"answer2\"><input type=\"radio\" id=\"answer2\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=2> " + 
@@ -172,7 +173,7 @@ TODO add scoring system
 								getCorrectAnswer(1) + br() + br() +
 								"Example question finish" + br();
 								
-					document.getElementById("content").innerHTML = "<br>" + qString+ "<br><br>Length of Question Array: " + questions.length;
+					document.getElementById("content").innerHTML = "<br>" + qString+ "<br><br>Length of Question Array: " + questions.length + 1;
 			}
 			function dprint(s){
 				document.getElementById("content").innerHTML = createQuestionBlock(globalProgress);
