@@ -603,5 +603,5 @@ var questions = [
         a3: "Manufacturer's may be able to produce error free equipment",
         a4: "Manufacturers must comply with warranty arrangements",
         aCorrect: 2
-    },
+    }
 ]
