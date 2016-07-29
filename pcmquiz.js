@@ -513,5 +513,68 @@ var questions = [
         a3: "Grayware",
         a4: "Virus",
         aCorrect: 2
+    },
+	// 58
+		{
+        question: "What does URL stand for ?",
+        a1: "Unified Remote Location",
+        a2: "Unidentified RAM Leverage",
+        a3: "Unified Resource Locator",
+        a4: "Unknown Radioactive Lemon",
+        aCorrect: 3
+    },
+	// 59
+		{
+        question: "What does URL stand for ?",
+        a1: "Unified Remote Location",
+        a2: "Unidentified RAM Leverage",
+        a3: "Unified Resource Locator",
+        a4: "Unknown Radioactive Lemon",
+        aCorrect: 3
+    },	
+	// 60
+		{
+        question: "Which type of memory is used in laptops ?",
+        a1: "DIMM",
+        a2: "RIMM",
+        a3: "SODIMM",
+        a4: "RAYMOSS",
+        aCorrect: 3
+    },
+	// 61
+		{
+        question: "Which of the following the user interacts with, using menus and icons ?",
+        a1: "CLI",
+        a2: "BMI",
+        a3: "ATA",
+        a4: "GUI",
+        aCorrect: 4
+    },
+	// 62
+		{
+        question: "An ICT technician should always be given information relating to fire and evacuation procedures when visiting a customer site. This statement is true for ?",
+        a1: "All visits",
+        a2: "Accompanied visits only",
+        a3: "Unaccompanied visits only",
+        a4: "Out-of-hours visit only",
+        aCorrect: 1
+    },
+	// 63
+		{
+        question: "When adjusting the height on an it workstation chair and monitor, the ?",
+        a1: "Operator should be looking upward at the monitor",
+        a2: "Desktop should be at waist height",
+        a3: "Operator’s knees should be slightly higher than their hips",
+        a4: "Operator’s feet should be on the floor or a footrest",
+        aCorrect: 4
+    },
+	// 64
+		{
+        question: "A box has arrived on site, which is too heavy for one person to lift. How should this problem be approached ?",
+        a1: "Leaves the box for a stronger to lift",
+        a2: "Carry out a full written risk assessment",
+        a3: "Two or more people should be asked to lift the box",
+        a4: "Open the box and move the its content bit by bit",
+        aCorrect: 3
     }
 ]
