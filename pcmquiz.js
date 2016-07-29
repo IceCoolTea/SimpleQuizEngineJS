@@ -287,7 +287,7 @@ var questions = [
         a2: "Class B fire",
         a3: "Class C fire",
         a4: "Class B & C fire",
-        aCorrect: 2
+        aCorrect: 1
     },
     // 33
     {
@@ -305,7 +305,7 @@ var questions = [
         a2: "A financial venture",
         a3: "The chance of being harmed by a hazard",
         a4: "The chance to avoid a hazard",
-        aCorrect: 2
+        aCorrect: 3
     },
     // 35
     {
@@ -571,7 +571,7 @@ var questions = [
 	// 64
 		{
         question: "A box has arrived on site, which is too heavy for one person to lift. How should this problem be approached ?",
-        a1: "Leaves the box for a stronger to lift",
+        a1: "Leave the box for a stronger to lift",
         a2: "Carry out a full written risk assessment",
         a3: "Two or more people should be asked to lift the box",
         a4: "Open the box and move the its content bit by bit",
@@ -603,5 +603,33 @@ var questions = [
         a3: "Manufacturer's may be able to produce error free equipment",
         a4: "Manufacturers must comply with warranty arrangements",
         aCorrect: 2
+    },
+	// 68
+		{
+        question: "On a ten month old ICT system, what is the most important step to take before applying corrective maintenance ?",
+        a1: "Remove all faulty items and take them back for repair",
+        a2: "Adjust management of the time it will take to complete the job",
+        a3: "Check warranty status with manufacturer",
+        a4: "Confirm availability of parts as listed in the service manual",
+        aCorrect: 3
+    },
+	// 69
+		{
+        question: "On a ten month old ICT system, what is the most important step to take before applying corrective maintenance ?",
+        a1: "Remove all faulty items and take them back for repair",
+        a2: "Adjust management of the time it will take to complete the job",
+        a3: "Check warranty status with manufacturer",
+        a4: "Confirm availability of parts as listed in the service manual",
+        aCorrect: 3
+    },
+	// 70
+		{
+        question: "On the customer's site you need to fix a system and equipment is not accessible, what action should you take ?",
+        a1: "Remove all faulty items and take them back for repair",
+        a2: "Adjust management of the time it will take to complete the job",
+        a3: "Check warranty status with manufacturer",
+        a4: "Confirm availability of parts as listed in the service manual",
+        aCorrect: 3
     }
+	
 ]
