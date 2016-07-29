@@ -624,12 +624,12 @@ var questions = [
     },
 	// 70
 		{
-        question: "On the customer's site you need to fix a system and equipment is not accessible, what action should you take ?",
-        a1: "Remove all faulty items and take them back for repair",
-        a2: "Adjust management of the time it will take to complete the job",
-        a3: "Check warranty status with manufacturer",
-        a4: "Confirm availability of parts as listed in the service manual",
-        aCorrect: 3
+        question: "On the customer's site you need to fix a system and the equipment is not accessible, what action should you take ?",
+        a1: "Rearrange for mutual convenient time",
+        a2: "Wait at the customer’s premises for someone to come back",
+        a3: "Get unauthorised access to fix the system",
+        a4: "Leave the customer’s premises immediately",
+        aCorrect: 1
     }
 	
 ]
