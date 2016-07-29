@@ -597,11 +597,11 @@ var questions = [
     },
     // 67
     {
-        question: "When working on a ICT system, the primary benefit of recording action correctly is ?",
-        a1: "Further repair could take less time",
-        a2: "Future fault diagnosis will be done more efficiently",
-        a3: "Manufacturer's may be able to produce error free equipment",
-        a4: "Manufacturers must comply with warranty arrangements",
+        question: "A technician carrying out corrective maintenance comes across an unexpected system fault. Who should they initially inform ?",
+        a1: "Department manager and manufacturer",
+        a2: "Line manager and customer",
+        a3: "System support manager and supporter",
+        a4: "System manufacturer and finance manager",
         aCorrect: 2
     },
     // 68
@@ -615,11 +615,11 @@ var questions = [
     },
     // 69
     {
-        question: "On a ten month old ICT system, what is the most important step to take before applying corrective maintenance ?",
-        a1: "Remove all faulty items and take them back for repair",
-        a2: "Adjust management of the time it will take to complete the job",
-        a3: "Check warranty status with manufacturer",
-        a4: "Confirm availability of parts as listed in the service manual",
+        question: "The efficiency of a large network can be maintained through ?",
+        a1: "Weekly service operation reviews",
+        a2: "Effective records of user access",
+        a3: "An affective maintenance schedule",
+        a4: "Clearly written and user documentation",
         aCorrect: 3
     },
     // 70
