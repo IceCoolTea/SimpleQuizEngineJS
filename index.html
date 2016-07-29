@@ -149,7 +149,7 @@ TODO add scoring system
                 } else {
                     passString = "You <b>Failed!!!</b>";
                 }
-                document.getElementById("content").innerHTML = "<center><p>Your score is:<br><b>" + globalScore + "/"+questions.length +"</b><br><br>" + passString;
+                document.getElementById("content").innerHTML = "<center><p>Your score is:<br><b>" + globalScore + "/"+questions.length +"</b><br><em>Passing score: </em>" + requiredScore() + "<br><br>" + passString;
             }
 
             function getRandomQuestion() {
@@ -183,6 +183,16 @@ TODO add scoring system
             function br() {
                 return "<br>";
             }
+			
+			function fisherYates( array ){
+				var count = array.length, randomnumber, temp;
+				while( count ){
+					randomnumber = Math.random() * count-- | 0;
+					temp = array[count];
+					array[count] = array[randomnumber];
+					array[randomnumber] = temp
+				}
+			}
 
             function getQuestionBlock(i) {
                 return br() + getQuestion(i) + br() +

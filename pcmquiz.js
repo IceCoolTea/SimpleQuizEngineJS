@@ -269,7 +269,7 @@ var questions = [
         a2: "The Control for Work and Risks Regulations",
         a3: "The Control of Substances Hazardous to Health Regulations",
         a4: "The Control of Substances Healthy to Humans Regualtions",
-        aCorrect: 2
+        aCorrect: 3
     },
     // 31
     {
@@ -525,12 +525,12 @@ var questions = [
     },
 	// 59
 		{
-        question: "What does URL stand for ?",
-        a1: "Unified Remote Location",
-        a2: "Unidentified RAM Leverage",
-        a3: "Uniform Resource Locator",
-        a4: "Unknown Radioactive Lemon",
-        aCorrect: 3
+        question: "What is the most appropriate action to take when a newly fitted component is found to be faulty ?",
+        a1: "Attempt to fix the new component on-site",
+        a2: "Remove the faulty component and inform the customer",
+        a3: "Return the unit to base and attempt to fix the new component",
+        a4: "Remove the faulty component and fit a new replacement component",
+        aCorrect: 4
     },	
 	// 60
 		{
