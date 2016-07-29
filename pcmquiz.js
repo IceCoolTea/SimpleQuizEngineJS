@@ -618,7 +618,7 @@ var questions = [
         question: "The efficiency of a large network can be maintained through ?",
         a1: "Weekly service operation reviews",
         a2: "Effective records of user access",
-        a3: "An affective maintenance schedule",
+        a3: "An effective maintenance schedule",
         a4: "Clearly written and user documentation",
         aCorrect: 3
     },
