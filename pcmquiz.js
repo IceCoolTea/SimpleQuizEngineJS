@@ -519,7 +519,7 @@ var questions = [
         question: "What does URL stand for ?",
         a1: "Unified Remote Location",
         a2: "Unidentified RAM Leverage",
-        a3: "Unified Resource Locator",
+        a3: "Uniform Resource Locator",
         a4: "Unknown Radioactive Lemon",
         aCorrect: 3
     },
