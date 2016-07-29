@@ -294,7 +294,7 @@ var questions = [
         question: "What is a hazard ?",
         a1: "Something that is scary",
         a2: "Something that makes you lose a game",
-        a3: "Something that cause harm",
+        a3: "Something that causes harm",
         a4: "Something that can improve IT Systems",
         aCorrect: 3
     },
@@ -455,10 +455,10 @@ var questions = [
 	{
         question: "What feature is characteristic of adware ?",
         a1: "Harmful virus that corrupts data",
-        a2: "It is displayed in popup windows,which open faster than the user can close them",
+        a2: "It is displayed in popup windows, which open faster than the user can close them",
         a3: "Sends out sensitive information",
         a4: "Its a malicious virus which gets into the computer by human error",
-        aCorrect: 4
+        aCorrect: 2
     },
 	// 52
 	{
@@ -528,7 +528,7 @@ var questions = [
         question: "What does URL stand for ?",
         a1: "Unified Remote Location",
         a2: "Unidentified RAM Leverage",
-        a3: "Unified Resource Locator",
+        a3: "Uniform Resource Locator",
         a4: "Unknown Radioactive Lemon",
         aCorrect: 3
     },	
@@ -576,5 +576,32 @@ var questions = [
         a3: "Two or more people should be asked to lift the box",
         a4: "Open the box and move the its content bit by bit",
         aCorrect: 3
-    }
+    },
+	// 65
+		{
+        question: "Which one of the following is not required in order to undertake a system repair if the system is out of the warranty period ?",
+        a1: "Repair procedures",
+        a2: "Available spare parts",
+        a3: "Staff time and spare parts",
+        a4: "Manufacturer's permission",
+        aCorrect: 4
+    },
+	// 66
+		{
+        question: "When working on a ICT system, the primary benefit of recording action correctly is ?",
+        a1: "Further repair could take less time",
+        a2: "Future fault diagnosis will be done more efficiently",
+        a3: "Manufacturer's may be able to produce error free equipment",
+        a4: "Manufacturers must comply with warranty arrangements",
+        aCorrect: 2
+    },
+	// 67
+		{
+        question: "When working on a ICT system, the primary benefit of recording action correctly is ?",
+        a1: "Further repair could take less time",
+        a2: "Future fault diagnosis will be done more efficiently",
+        a3: "Manufacturer's may be able to produce error free equipment",
+        a4: "Manufacturers must comply with warranty arrangements",
+        aCorrect: 2
+    },
 ]
