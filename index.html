@@ -31,13 +31,13 @@ TODO add scoring system
             width: 600px;
             text-align: center;
             border: 1px solid blue;
-        }        
-		footer {
+        }
+        footer {
             margin: 0 auto;
             width: 600px;
             text-align: center;
             border: 1px solid blue;
-			font-size: 12px;
+            font-size: 12px;
         }
         #settings {
             margin: 0 auto;
@@ -90,138 +90,142 @@ TODO add scoring system
     <div id="controls">
         <button id="nextButton" onclick="nextQuestion()">Next</button>
     </div>
-    <footer><em>There will be 200 questions for PCM. Passing mark is 70%</em><br>
-	<a href="http://s05.flagcounter.com/more/fKTw"><img src="http://s05.flagcounter.com/count/fKTw/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_5/viewers_3/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-	</footer>
-        </div>
-        <script src="pcmquiz.js"></script>
-        <script>
-            var globalScore = 0;
-            var globalProgress = 0;
-            var currentAnswer = 0;
-			
-            function createQuestionBlock(i) {
-                var questionNumber = i + 1;
-                var qString = "<p>Question number: " + questionNumber + "<br><b>" + getQuestion(i) + "</b></p>" + br() + "<form>" +
-                    "<label for=\"answer1\"><input type=\"radio\" id=\"answer1\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=1> " +
-                    getAnswer1(i) + "<\label>" + br() +
-                    "<label for=\"answer2\"><input type=\"radio\" id=\"answer2\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=2> " +
-                    getAnswer2(i) + "<\label>" + br() +
-                    "<label for=\"answer3\"><input type=\"radio\" id=\"answer3\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=3> " +
-                    getAnswer3(i) + "<\label>" + br() +
-                    "<label for=\"answer4\"><input type=\"radio\" id=\"answer4\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=4> " +
-                    getAnswer4(i) + "<\label>" + br() + br();
-                return qString;
+    <footer><em>There will be 200 questions for PCM. Passing mark is 70%</em>
+        <br>
+        <img src="http://s05.flagcounter.com/count/fKTw/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_5/viewers_3/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0">
 
+    </footer>
+    </div>
+    <script src="pcmquiz.js"></script>
+    <script>
+        var globalScore = 0;
+        var globalProgress = 0;
+        var currentAnswer = 0;
+
+        function createQuestionBlock(i) {
+            var questionNumber = i + 1;
+            var qString = "<p>Question number: " + questionNumber + "<br><b>" + getQuestion(i) + "</b></p>" + br() + "<form>" +
+                "<label for=\"answer1\"><input type=\"radio\" id=\"answer1\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=1> " +
+                getAnswer1(i) + "<\label>" + br() +
+                "<label for=\"answer2\"><input type=\"radio\" id=\"answer2\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=2> " +
+                getAnswer2(i) + "<\label>" + br() +
+                "<label for=\"answer3\"><input type=\"radio\" id=\"answer3\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=3> " +
+                getAnswer3(i) + "<\label>" + br() +
+                "<label for=\"answer4\"><input type=\"radio\" id=\"answer4\" name=\"answers\" onclick=\"radioOnChange(this," + i + ");\" value=4> " +
+                getAnswer4(i) + "<\label>" + br() + br();
+            return qString;
+
+        }
+
+        function requiredScore() {
+
+            return Math.floor(questions.length * (passingPercent / 100));
+        }
+
+        function radioOnChange(answers, i) {
+            if (answers.value == questions[i].aCorrect) {
+                currentAnswer = answers.value;
+            } else {
+                currentAnswer = answers.value;
             }
-			
-			function requiredScore(){
-				
-				return Math.floor(questions.length*(passingPercent/100));
-			}
+        }
 
-            function radioOnChange(answers, i) {
-                if (answers.value == questions[i].aCorrect) {
-                    currentAnswer = answers.value;
-                } else {
-                    currentAnswer = answers.value;
-                }
+        function nextQuestion() {
+            if (currentAnswer == questions[globalProgress].aCorrect) {
+                globalProgress++;
+                globalScore++;
+            } else {
+                globalProgress++;
             }
-
-            function nextQuestion() {
-                if (currentAnswer == questions[globalProgress].aCorrect) {
-                    globalProgress++;
-                    globalScore++;
-                } else {
-                    globalProgress++;
-                }
-                if (globalProgress >= questions.length) {
-                    dprintScore();
-                } else {
-                    dprint();
-                }
+            if (globalProgress >= questions.length) {
+                dprintScore();
+            } else {
+                dprint();
             }
+        }
 
-            function dprintScore() {
-                var passString = "";
-                if (globalScore > requiredScore()) {
-                    passString = "You <b>Passed!!!</b>";
-                } else {
-                    passString = "You <b>Failed!!!</b>";
-                }
-                document.getElementById("content").innerHTML = "<center><p>Your score is:<br><b>" + globalScore + "/"+questions.length +"</b><br><em>Passing score: </em>" + requiredScore() + "<br><br>" + passString;
+        function dprintScore() {
+            var passString = "";
+            if (globalScore > requiredScore()) {
+                passString = "You <b>Passed!!!</b>";
+            } else {
+                passString = "You <b>Failed!!!</b>";
             }
+            document.getElementById("content").innerHTML = "<center><p>Your score is:<br><b>" + globalScore + "/" + questions.length + "</b><br><em>Passing score: </em>" + requiredScore() + "<br><br>" + passString;
+        }
 
-            function getRandomQuestion() {
-                return Math.floor((Math.random() * questions.length));
+        function getRandomQuestion() {
+            return Math.floor((Math.random() * questions.length));
+        }
+
+        function getQuestion(i) {
+            return questions[i].question;
+        }
+
+        function getAnswer1(i) {
+            return questions[i].a1;
+        }
+
+        function getAnswer2(i) {
+            return questions[i].a2;
+        }
+
+        function getAnswer3(i) {
+            return questions[i].a3;
+        }
+
+        function getAnswer4(i) {
+            return questions[i].a4;
+        }
+
+        function getCorrectAnswer(i) {
+            return questions[i].aCorrect;
+        }
+
+        function br() {
+            return "<br>";
+        }
+
+        function fisherYates(array) {
+            var count = array.length,
+                randomnumber, temp;
+            while (count) {
+                randomnumber = Math.random() * count-- | 0;
+                temp = array[count];
+                array[count] = array[randomnumber];
+                array[randomnumber] = temp
             }
+        }
 
-            function getQuestion(i) {
-                return questions[i].question;
-            }
+        function getQuestionBlock(i) {
+            return br() + getQuestion(i) + br() +
+                getAnswer1(i) + br() +
+                getAnswer2(i) + br() +
+                getAnswer3(i) + br() +
+                getAnswer4(i) + br() +
+                getCorrectAnswer(i) + br() + br() +
+                "Example question finish";
+        }
 
-            function getAnswer1(i) {
-                return questions[i].a1;
-            }
+        function testQuestionBlock() {
+            var qString = br() + getQuestion(1) + br() +
+                getAnswer1(1) + br() +
+                getAnswer2(1) + br() +
+                getAnswer3(1) + br() +
+                getAnswer4(1) + br() +
+                getCorrectAnswer(1) + br() + br() +
+                "Example question finish" + br();
 
-            function getAnswer2(i) {
-                return questions[i].a2;
-            }
+            document.getElementById("content").innerHTML = "<br>" + qString + "<br><br>Length of Question Array: " + questions.length + 1;
+        }
 
-            function getAnswer3(i) {
-                return questions[i].a3;
-            }
-
-            function getAnswer4(i) {
-                return questions[i].a4;
-            }
-
-            function getCorrectAnswer(i) {
-                return questions[i].aCorrect;
-            }
-
-            function br() {
-                return "<br>";
-            }
-			
-			function fisherYates( array ){
-				var count = array.length, randomnumber, temp;
-				while( count ){
-					randomnumber = Math.random() * count-- | 0;
-					temp = array[count];
-					array[count] = array[randomnumber];
-					array[randomnumber] = temp
-				}
-			}
-
-            function getQuestionBlock(i) {
-                return br() + getQuestion(i) + br() +
-                    getAnswer1(i) + br() +
-                    getAnswer2(i) + br() +
-                    getAnswer3(i) + br() +
-                    getAnswer4(i) + br() +
-                    getCorrectAnswer(i) + br() + br() +
-                    "Example question finish";
-            }
-
-            function testQuestionBlock() {
-                var qString = br() + getQuestion(1) + br() +
-                    getAnswer1(1) + br() +
-                    getAnswer2(1) + br() +
-                    getAnswer3(1) + br() +
-                    getAnswer4(1) + br() +
-                    getCorrectAnswer(1) + br() + br() +
-                    "Example question finish" + br();
-
-                document.getElementById("content").innerHTML = "<br>" + qString + "<br><br>Length of Question Array: " + questions.length + 1;
-            }
-
-            function dprint(s) {
+        function dprint(s) {
                 document.getElementById("content").innerHTML = createQuestionBlock(globalProgress);
             }
-            document.getElementById("settings").innerHTML = "Number of Questions: " + questions.length;
-            dprint();
-        </script>
+            //fisherYates(questions); // To enable shuffling later
+        document.getElementById("settings").innerHTML = "Number of Questions: " + questions.length;
+        dprint();
+    </script>
 </body>
 
 </html>

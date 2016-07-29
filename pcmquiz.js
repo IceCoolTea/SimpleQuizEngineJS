@@ -451,8 +451,8 @@ var questions = [
         a4: "Use evidence obtained from the system memory and the error log",
         aCorrect: 3
     },
-	// 51
-	{
+    // 51
+    {
         question: "What feature is characteristic of adware ?",
         a1: "Harmful virus that corrupts data",
         a2: "It is displayed in popup windows, which open faster than the user can close them",
@@ -460,8 +460,8 @@ var questions = [
         a4: "Its a malicious virus which gets into the computer by human error",
         aCorrect: 2
     },
-	// 52
-	{
+    // 52
+    {
         question: "A Berg connector is what connects a.. ?",
         a1: "Optical drive",
         a2: "Floppy drive",
@@ -469,8 +469,8 @@ var questions = [
         a4: "PSU",
         aCorrect: 2
     },
-	// 53
-	{
+    // 53
+    {
         question: "What does POST stand for ?",
         a1: "Peter On Sea Trip",
         a2: "Power On Self Test",
@@ -478,26 +478,26 @@ var questions = [
         a4: "Power On System Trust",
         aCorrect: 2
     },
-	// 54
-	{
+    // 54
+    {
         question: "When it comes to security which file system is more secure ?",
         a1: "FAT",
         a2: "FAT32",
         a3: "NTFS",
         a4: "UDF",
         aCorrect: 3
-    },	
-	// 55
-	{
+    },
+    // 55
+    {
         question: "What is typically included in a service pack ?",
         a1: "Device drivers for non-standard devices",
         a2: "Virus definitions",
         a3: "Operating system upgrades and patches",
         a4: "Hardware compatibility list",
         aCorrect: 3
-    },	
-	// 56
-		{
+    },
+    // 56
+    {
         question: "What does ICMP stand for ?",
         a1: "Internet control message protocol",
         a2: "Ice cold master ponies",
@@ -505,8 +505,8 @@ var questions = [
         a4: "Information control message protocol",
         aCorrect: 1
     },
-	// 57
-		{
+    // 57
+    {
         question: "Which of the following is a software program that displays advertising on your computer ?",
         a1: "Spyware",
         a2: "Adware",
@@ -514,8 +514,8 @@ var questions = [
         a4: "Virus",
         aCorrect: 2
     },
-	// 58
-		{
+    // 58
+    {
         question: "What does URL stand for ?",
         a1: "Unified Remote Location",
         a2: "Unidentified RAM Leverage",
@@ -523,17 +523,17 @@ var questions = [
         a4: "Unknown Radioactive Lemon",
         aCorrect: 3
     },
-	// 59
-		{
+    // 59
+    {
         question: "What is the most appropriate action to take when a newly fitted component is found to be faulty ?",
         a1: "Attempt to fix the new component on-site",
         a2: "Remove the faulty component and inform the customer",
         a3: "Return the unit to base and attempt to fix the new component",
         a4: "Remove the faulty component and fit a new replacement component",
         aCorrect: 4
-    },	
-	// 60
-		{
+    },
+    // 60
+    {
         question: "Which type of memory is used in laptops ?",
         a1: "DIMM",
         a2: "RIMM",
@@ -541,8 +541,8 @@ var questions = [
         a4: "RAYMOSS",
         aCorrect: 3
     },
-	// 61
-		{
+    // 61
+    {
         question: "Which of the following the user interacts with, using menus and icons ?",
         a1: "CLI",
         a2: "BMI",
@@ -550,8 +550,8 @@ var questions = [
         a4: "GUI",
         aCorrect: 4
     },
-	// 62
-		{
+    // 62
+    {
         question: "An ICT technician should always be given information relating to fire and evacuation procedures when visiting a customer site. This statement is true for ?",
         a1: "All visits",
         a2: "Accompanied visits only",
@@ -559,8 +559,8 @@ var questions = [
         a4: "Out-of-hours visit only",
         aCorrect: 1
     },
-	// 63
-		{
+    // 63
+    {
         question: "When adjusting the height on an it workstation chair and monitor, the ?",
         a1: "Operator should be looking upward at the monitor",
         a2: "Desktop should be at waist height",
@@ -568,8 +568,8 @@ var questions = [
         a4: "Operator’s feet should be on the floor or a footrest",
         aCorrect: 4
     },
-	// 64
-		{
+    // 64
+    {
         question: "A box has arrived on site, which is too heavy for one person to lift. How should this problem be approached ?",
         a1: "Leave the box for a stronger to lift",
         a2: "Carry out a full written risk assessment",
@@ -577,8 +577,8 @@ var questions = [
         a4: "Open the box and move the its content bit by bit",
         aCorrect: 3
     },
-	// 65
-		{
+    // 65
+    {
         question: "Which one of the following is not required in order to undertake a system repair if the system is out of the warranty period ?",
         a1: "Repair procedures",
         a2: "Available spare parts",
@@ -586,8 +586,8 @@ var questions = [
         a4: "Manufacturer's permission",
         aCorrect: 4
     },
-	// 66
-		{
+    // 66
+    {
         question: "When working on a ICT system, the primary benefit of recording action correctly is ?",
         a1: "Further repair could take less time",
         a2: "Future fault diagnosis will be done more efficiently",
@@ -595,8 +595,8 @@ var questions = [
         a4: "Manufacturers must comply with warranty arrangements",
         aCorrect: 2
     },
-	// 67
-		{
+    // 67
+    {
         question: "When working on a ICT system, the primary benefit of recording action correctly is ?",
         a1: "Further repair could take less time",
         a2: "Future fault diagnosis will be done more efficiently",
@@ -604,8 +604,8 @@ var questions = [
         a4: "Manufacturers must comply with warranty arrangements",
         aCorrect: 2
     },
-	// 68
-		{
+    // 68
+    {
         question: "On a ten month old ICT system, what is the most important step to take before applying corrective maintenance ?",
         a1: "Remove all faulty items and take them back for repair",
         a2: "Adjust management of the time it will take to complete the job",
@@ -613,8 +613,8 @@ var questions = [
         a4: "Confirm availability of parts as listed in the service manual",
         aCorrect: 3
     },
-	// 69
-		{
+    // 69
+    {
         question: "On a ten month old ICT system, what is the most important step to take before applying corrective maintenance ?",
         a1: "Remove all faulty items and take them back for repair",
         a2: "Adjust management of the time it will take to complete the job",
@@ -622,8 +622,8 @@ var questions = [
         a4: "Confirm availability of parts as listed in the service manual",
         aCorrect: 3
     },
-	// 70
-		{
+    // 70
+    {
         question: "On the customer's site you need to fix a system and the equipment is not accessible, what action should you take ?",
         a1: "Rearrange for mutual convenient time",
         a2: "Wait at the customer’s premises for someone to come back",
@@ -631,5 +631,5 @@ var questions = [
         a4: "Leave the customer’s premises immediately",
         aCorrect: 1
     }
-	
+
 ]
