@@ -142,7 +142,7 @@ var questions = [
         a1: "USB",
         a2: "Parallel",
         a3: "Serial",
-        a4: "USB3.1",
+        a4: "USB 3.1",
         aCorrect: 4
     },
     // 17
@@ -561,7 +561,7 @@ var questions = [
     },
     // 63
     {
-        question: "When adjusting the height on an it workstation chair and monitor, the ?",
+        question: "When adjusting the height on an IT workstation chair and monitor, the ?",
         a1: "Operator should be looking upward at the monitor",
         a2: "Desktop should be at waist height",
         a3: "Operator’s knees should be slightly higher than their hips",
@@ -630,6 +630,104 @@ var questions = [
         a3: "Get unauthorised access to fix the system",
         a4: "Leave the customer’s premises immediately",
         aCorrect: 1
+    },
+    // 71
+    {
+        question: "When building a custom computer, how do you consider its specifications?",
+        a1: "Always get the most expensive components",
+        a2: "Always get the cheapest components",
+        a3: "Research its use case and get the recommended configuration for it",
+        a4: "Always get every component from one specific brand only",
+        aCorrect: 3
+    },
+    // 72
+    {
+        question: "Who do you escalate an incident to?",
+        a1: "Customer",
+        a2: "Manufacturer",
+        a3: "Line Manager",
+        a4: "Social Media",
+        aCorrect: 3
+    },
+    // 73
+    {
+        question: "What does SLA stands for?",
+        a1: "Software License Association",
+        a2: "System Lease Allotment",
+        a3: "Saturday Live Adept",
+        a4: "Service Level Agreement",
+        aCorrect: 4
+    },
+    // 74
+    {
+        question: "Which connectors are most common for monitors?",
+        a1: "USB, SATA, COM1",
+        a2: "VGA, DVI, HDMI",
+        a3: "RJ45, RJ11",
+        a4: "SCART, RCA, Coaxial",
+        aCorrect: 2
+    },
+    // 75
+    {
+        question: "Which programming languages we use to make basic websites?",
+        a1: "C#, Cobol, Fortran",
+        a2: "HTML, CSS, JS",
+        a3: "Java, Swift, F#",
+        a4: "Python, TypeScript, C++",
+        aCorrect: 2
+    },
+    // 76
+    {
+        question: "What does antivirus software protect you from?",
+        a1: "Malicious software to infect the system",
+        a2: "Viruses that are already in the system",
+        a3: "Advertisements on websites",
+        a4: "Pirate software",
+        aCorrect: 1
+    },
+    // 77
+    {
+        question: "What does PAN stands for?",
+        a1: "Parking Access Negotiation",
+        a2: "Personal Area Network",
+        a3: "Palatable Nourishment",
+        a4: "Protocol Analising Notation",
+        aCorrect: 2
+    },
+    // 78
+    {
+        question: "What kind of IP address is this 10.0.0.1?",
+        a1: "IPv3",
+        a2: "IPv4",
+        a3: "IPv5",
+        a4: "IPv6",
+        aCorrect: 2
+    },
+    // 79
+    {
+        question: "Why consider performing a clean system install instead of upgrading the system?",
+        a1: "It gives more work hours",
+        a2: "It's the first option in the installation menu",
+        a3: "It removes possible software errors and installs a new clean system",
+        a4: "Only use clean install if the system arrived dirty",
+        aCorrect: 3
+    },
+    // 80
+    {
+        question: "Why is it important to archive old email messages?",
+        a1: "Reduces inbox size",
+        a2: "Easier to organise old messages",
+        a3: "Reduces loading times for email clients",
+        a4: "All of the above",
+        aCorrect: 4
+    },
+    // 81
+    {
+        question: "Why is the thermal paste important on the CPU?",
+        a1: "It makes the cooler stick to the CPU properly",
+        a2: "It allows better heat conductivity",
+        a3: "It makes it easier to replace CPU",
+        a4: "It protects the top of the IHS from scratches",
+        aCorrect: 2
     }
-
 ]
